@@ -15,8 +15,8 @@ def getweather(lat, long):
     conn = http.client.HTTPSConnection("api-metoffice.apiconnect.ibmcloud.com")
 
     headers = {
-        'X-IBM-Client-Id': os.getenv('api_key'),
-        'X-IBM-Client-Secret': os.getenv('api_secret'),
+        'X-IBM-Client-Id': os.getenv('api_key'), #Replace os.getenv('api_key') with your API Key
+        'X-IBM-Client-Secret': os.getenv('api_secret'), #Replace os.getenv('api_secret') with your API Secret
         'accept': "application/json"
         }
 
@@ -43,7 +43,6 @@ def render():
     data = getweather(latitude, longitude)
     location = data["features"][0]["properties"]["location"]["name"]
     timeSeries0 = data["features"][0]["properties"]["timeSeries"][0]
-    #Pick up her next and narrow down data further
     mintemp0 = timeSeries0["minScreenAirTemp"]
     maxtemp0 = timeSeries0["maxScreenAirTemp"]
     windspeed0 = timeSeries0["windSpeed10m"]
