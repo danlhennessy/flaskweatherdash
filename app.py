@@ -15,7 +15,7 @@ def getweather(lat, long):
     conn = http.client.HTTPSConnection("api-metoffice.apiconnect.ibmcloud.com")
 
     headers = {
-        'X-IBM-Client-Id': os.getenv('api_key'), #Replace os.getenv('api_key') with your API Key
+        'X-IBM-Client-Id': os.getenv('api_key'), #Replace os.getenv('api_key') with your API Key. Or use a .env file containing the creds
         'X-IBM-Client-Secret': os.getenv('api_secret'), #Replace os.getenv('api_secret') with your API Secret
         'accept': "application/json"
         }
