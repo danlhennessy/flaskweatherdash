@@ -6,3 +6,5 @@ Given a location or Latitude/Longitude coords, the app shows a visual forecast o
 
 Requires an API key+secret from following link to use:
 https://metoffice.apiconnect.ibmcloud.com/metoffice/production/
+
+Source: https://github.com/danlhennessy/flaskweatherdash
